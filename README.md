@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Movie App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Technical Stack And Packages
 
-In the project directory, you can run:
+- HTML
+- SCSS (Sass Module)
+- React JS
+- Typescript
+- Docker
+- ESLint And Some Another Configuration
+- Lazy Loading
 
-### `npm start`
+### Packages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Axios Using for HTTP Request is Much Better Than Fetch Api
+- uuid for Generating Unique Key
+- React-lazy-loading for LazyLoading Images
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**_ I Tried to Do not Use Any Packages Or Any Libraries For Showing Hand Write _**
 
-### `npm test`
+### `ENV File`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+set Environment Variable Before Do any thing on Project.
+Create File with `.env` Extension in Root Of Project
 
-### `npm run build`
+And Copy Inner Variable in `.env.sample` File Into Your Created `.env` File
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Scripts ( Usage ) (after set .env file)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+There are 2 Way for Run Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Using NPM`
 
-### `npm run eject`
+Clone The Project Follow up Commands
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```terminal
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After Package Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```terminal
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `Using Docker`
 
-## Learn More
+Use docker Commands :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`docker-compose up -d`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Docker Exposed On port `3000` FreeUp it.
+
+> http://localhost:3000/
+
+### Project bonuses has been Done :
+
+Clean code and following best practices
+
+Dockerize your application by creating an efficient Dockerfile
+
+Store the filters in the URL query strings and sync it with the component filter object
+
+Make sure the ratio for the posters is 2:3 or any other ratio you find suitable
+
+Add lazy loading for posters
+
+Using TypeScript
