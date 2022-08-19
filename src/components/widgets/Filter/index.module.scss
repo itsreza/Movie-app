@@ -1,0 +1,28 @@
+.filter_container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  margin: 2rem 5rem;
+
+  .logo_section {
+    border-right: 1px solid #c3bebe;
+  }
+  .filter_fields_section {
+    display: flex;
+    align-items: center;
+  }
+  div {
+    padding: 0 1rem;
+  }
+}
+
+.a {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+}

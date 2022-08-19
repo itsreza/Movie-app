@@ -1,0 +1,18 @@
+.page_container {
+  .content_container {
+    max-width: 1400px;
+    margin: auto;
+    .content_section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+  }
+  .empty_movie {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+}
