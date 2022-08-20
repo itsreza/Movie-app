@@ -20,6 +20,7 @@ export default function MoviesList() {
   const [errorMessages, setErrorMessages] = useState<string[]>([]);
   // Constants
   const hasError = errorMessages?.length > 0;
+  const currentYear = new Date().getFullYear();
 
   // Request Handlers
   const onSuccessGetMovies = (response: AxiosResponse): void => {
@@ -30,12 +31,16 @@ export default function MoviesList() {
       totalCount: total_results
     };
     setMoviesList(results);
+    console.log('FIRED');
     setPagination(paginateDetails);
   };
 
   const onErrorGetMovies = (error: AxiosError | any): void => {
-    setErrorMessages([...error.response.data.errors]);
     setMoviesList([]);
+    if (error.message === 'Network Error') {
+      return setErrorMessages(['Please Check Your Internet Connection OR using Vpn']);
+    }
+    setErrorMessages([...error.response.data.errors, error.message]);
   };
 
   // Request Get Movies
@@ -43,7 +48,7 @@ export default function MoviesList() {
     if (isFetching) {
       setErrorMessages([]);
       getRequestMethod(
-        `&year=${getSearchParams().year || 1990}&sort_by=popularity.desc&vote_average.gte=${
+        `&year=${getSearchParams().year || currentYear}&sort_by=popularity.desc&vote_average.gte=${
           getSearchParams()?.['vote_average.gte'] ?? 0
         }&vote_average.lte=${getSearchParams()?.['vote_average.lte'] ?? 10}&page=${
           getSearchParams().page ?? 1
@@ -103,7 +108,7 @@ export default function MoviesList() {
           {hasError && <ErrorMessage messages={errorMessages} />}
           {isFetching ? (
             <Loading />
-          ) : moviesList?.length < 1 ? (
+          ) : moviesList?.length < 1 && errorMessages?.length < 1 ? (
             <div className={classes.empty_movie}>There is Not Any Movie To Show</div>
           ) : (
             <>{renderMovies}</>

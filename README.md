@@ -27,6 +27,8 @@ Create File with `.env` Extension in Root Of Project
 
 And Copy Inner Variable in `.env.sample` File Into Your Created `.env` File
 
+## Use Proxy Or Any VPN
+
 ## Scripts ( Usage ) (after set .env file)
 
 There are 2 Way for Run Project
