@@ -64,7 +64,7 @@ export default function MoviesList() {
   }, []);
 
   // Render Movies List
-  const renderMovies = moviesList.map((movie: InterfaceMovie) => (
+  const renderMovies = moviesList?.map((movie: InterfaceMovie) => (
     <div key={movie.id}>
       <Card
         voteAverage={movie.vote_average}
