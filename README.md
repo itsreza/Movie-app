@@ -57,11 +57,11 @@ Docker Exposed On port `3000` FreeUp it.
 
 > http://localhost:3000/
 
-LIVE DEMO ON CodeSandbox Available.
+<!-- LIVE DEMO ON CodeSandbox Available.
 
 ### [View only](https://wx0n1e.csb.app/)
 
-### [Sandbox Live DEMO](https://codesandbox.io/s/mystifying-bardeen-wx0n1e)
+### [Sandbox Live DEMO](https://codesandbox.io/s/mystifying-bardeen-wx0n1e) -->
 
 ### Project bonuses has been Done :
 

@@ -31,7 +31,6 @@ export default function MoviesList() {
       totalCount: total_results
     };
     setMoviesList(results);
-    console.log('FIRED');
     setPagination(paginateDetails);
   };
 
